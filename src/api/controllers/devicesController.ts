@@ -290,9 +290,6 @@ const updateDataField = async (
 ) => {
   try {
     const {id} = req.params;
-    console.log(req.body);
-    console.log(req.body.data);
-    console.log(id);
     const data = req.body.data;
     const updatedDevice = await deviceModel.findOneAndUpdate(
       {_id: id},
@@ -314,7 +311,6 @@ const updateDataField = async (
       });
       return;
     }
-    console.log(updatedDevice);
     res.json({
       message: 'Device data updated successfully',
       data: updatedDevice,

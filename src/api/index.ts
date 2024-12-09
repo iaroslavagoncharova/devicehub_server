@@ -4,6 +4,7 @@ import deviceClassRoute from './routes/deviceClassRoute';
 import ruuviDataRoute from './routes/ruuviDataRoute';
 import devicesRoute from './routes/devicesRoute';
 import loginRoute from './routes/loginRoute';
+import aggregationRoute from './routes/aggregationRoute';
 import {MessageResponse} from '../types/MessageTypes';
 
 const router = express.Router();
@@ -19,5 +20,6 @@ router.use('/devicedata', deviceDataRoute);
 router.use('/deviceclasses', deviceClassRoute);
 router.use('/ruuvi', ruuviDataRoute);
 router.use('/login', loginRoute);
+router.use('/aggregation', aggregationRoute);
 
 export default router;
